@@ -3,17 +3,40 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "scripts": {
+    "lint:js": "prettier --write . && eslint **/*",
+    "lint:css": "stylelint \"src/**/*.{less,css}\" --config ./.stylelintrc.js --custom-syntax postcss-less --fix",
+    "lint": "prettier --write . && eslint */**",
     "build": "webpack --mode=production",
-    "dev": "webpack serve --mode=development"
+    "dev": "webpack serve --mode=development",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.7.0",
+    "eslint-config-alloy": "^4.4.0",
+    "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.3.3",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.3.0",
+    "stylelint-config-css-modules": "^2.3.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-webpack-plugin": "^3.1.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.4",
     "webpack": "^5.65.0",
@@ -23,5 +46,14 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+        "yarn run lint",
+        "git add --force"
+    ],
+    "*.{md,json}": [
+        "git add --force"
+    ]
   }
 }

@@ -1,0 +1,70 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add -D @commitlint/config-conventional @commitlint/cli husky lint-staged
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/lvkun/Library/Caches/Yarn/v6/npm-ansi-styles-3.2.1-41fbb20243e50b12be0f04b8dedbf07520ce841d-integrity/node_modules/ansi-styles/license' -> '/Users/lvkun/Desktop/learn/my-react/node_modules/@babel/highlight/node_modules/ansi-styles/license'
+
+npm manifest: 
+  {
+    "name": "my-react",
+    "version": "1.0.0",
+    "main": "src/index.tsx",
+    "scripts": {
+      "lint:js": "prettier --write . && eslint **/*",
+      "lint:css": "stylelint \"src/**/*.{less,css}\" --config ./.stylelintrc.js --custom-syntax postcss-less --fix",
+      "lint": "prettier --write . && eslint */**",
+      "build": "webpack --mode=production",
+      "dev": "webpack serve --mode=development"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+      "@types/react": "^17.0.38",
+      "@types/react-dom": "^17.0.11",
+      "@typescript-eslint/eslint-plugin": "^5.10.0",
+      "@typescript-eslint/parser": "^5.10.0",
+      "css-loader": "^6.5.1",
+      "eslint": "^8.7.0",
+      "eslint-config-alloy": "^4.4.0",
+      "eslint-plugin-react": "^7.28.0",
+      "html-webpack-plugin": "^5.5.0",
+      "less": "^4.1.2",
+      "less-loader": "^10.2.0",
+      "prettier": "^2.5.1",
+      "style-loader": "^3.3.1",
+      "stylelint": "^14.3.0",
+      "stylelint-config-css-modules": "^2.3.0",
+      "stylelint-config-standard": "^24.0.0",
+      "stylelint-order": "^5.0.0",
+      "stylelint-webpack-plugin": "^3.1.1",
+      "ts-loader": "^9.2.6",
+      "typescript": "^4.5.4",
+      "webpack": "^5.65.0",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.7.2"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
